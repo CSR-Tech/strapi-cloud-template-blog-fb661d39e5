@@ -9,6 +9,7 @@
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "seed:services": "node ./scripts/seed-services.js",
+    "update:permissions": "node ./scripts/update-permissions.js",
     "start": "strapi start",
     "strapi": "strapi"
   },
