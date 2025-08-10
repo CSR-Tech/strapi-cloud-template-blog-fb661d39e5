@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "get_quotes",
+  "info": {
+    "singularName": "get-quote",
+    "pluralName": "get-quotes",
+    "displayName": "GetQuote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "PhoneNumber": {
+      "type": "biginteger"
+    },
+    "ProjectDescription": {
+      "type": "text"
+    },
+    "EmailAddress": {
+      "type": "email"
+    }
+  }
+}

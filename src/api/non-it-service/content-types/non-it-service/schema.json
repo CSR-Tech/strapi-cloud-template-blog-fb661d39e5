@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "non_it_services",
+  "info": {
+    "singularName": "non-it-service",
+    "pluralName": "non-it-services",
+    "displayName": "NonIT Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

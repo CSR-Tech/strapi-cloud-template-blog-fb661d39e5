@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "it_services",
+  "info": {
+    "singularName": "it-service",
+    "pluralName": "it-services",
+    "displayName": "IT Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "send_messages",
+  "info": {
+    "singularName": "send-message",
+    "pluralName": "send-messages",
+    "displayName": "SendMessage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Project": {
+      "type": "text"
+    },
+    "EmailAddress": {
+      "type": "email"
+    }
+  }
+}
