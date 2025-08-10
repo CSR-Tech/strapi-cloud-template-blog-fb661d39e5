@@ -23,7 +23,7 @@
     "EmailAddress": {
       "type": "email"
     },
-    "serviceType": {
+    "serviceType1": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::service-type.service-type",
@@ -38,6 +38,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::non-it-service.non-it-service"
+    },
+    "ServiceTypeField": {
+      "type": "string"
+    },
+    "SubServiceTypeField": {
+      "type": "string"
     }
   }
 }

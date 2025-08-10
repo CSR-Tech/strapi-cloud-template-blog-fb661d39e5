@@ -33,7 +33,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::get-quote.get-quote",
-      "mappedBy": "serviceType"
+      "mappedBy": "serviceType1"
     }
   }
 }
