@@ -8,6 +8,7 @@
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
+    "seed:services": "node ./scripts/seed-services.js",
     "start": "strapi start",
     "strapi": "strapi"
   },

@@ -22,6 +22,22 @@
     },
     "EmailAddress": {
       "type": "email"
+    },
+    "serviceType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service-type.service-type",
+      "inversedBy": "getQuotes"
+    },
+    "itService": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::it-service.it-service"
+    },
+    "nonItService": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::non-it-service.non-it-service"
     }
   }
 }

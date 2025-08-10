@@ -521,6 +521,10 @@ export interface ApiGetQuoteGetQuote extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     EmailAddress: Schema.Attribute.Email;
+    itService: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::it-service.it-service'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -528,9 +532,17 @@ export interface ApiGetQuoteGetQuote extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     Name: Schema.Attribute.String;
+    nonItService: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::non-it-service.non-it-service'
+    >;
     PhoneNumber: Schema.Attribute.BigInteger;
     ProjectDescription: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    serviceType: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::service-type.service-type'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -591,6 +603,10 @@ export interface ApiItServiceItService extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    serviceType: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::service-type.service-type'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -620,6 +636,10 @@ export interface ApiNonItServiceNonItService
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    serviceType: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::service-type.service-type'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -670,6 +690,14 @@ export interface ApiServiceTypeServiceType extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    getQuotes: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::get-quote.get-quote'
+    >;
+    itServices: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::it-service.it-service'
+    >;
     label: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -677,6 +705,10 @@ export interface ApiServiceTypeServiceType extends Struct.CollectionTypeSchema {
       'api::service-type.service-type'
     > &
       Schema.Attribute.Private;
+    nonItServices: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::non-it-service.non-it-service'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;

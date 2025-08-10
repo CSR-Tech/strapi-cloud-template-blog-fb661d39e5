@@ -13,6 +13,12 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "serviceType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service-type.service-type",
+      "inversedBy": "nonItServices"
     }
   }
 }

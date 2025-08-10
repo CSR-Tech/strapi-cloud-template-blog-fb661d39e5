@@ -16,6 +16,24 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "itServices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::it-service.it-service",
+      "mappedBy": "serviceType"
+    },
+    "nonItServices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::non-it-service.non-it-service",
+      "mappedBy": "serviceType"
+    },
+    "getQuotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::get-quote.get-quote",
+      "mappedBy": "serviceType"
     }
   }
 }
